@@ -1,2 +1,2 @@
 # gene_search
-a server specific gene search script
+Some basic scripts to ease data analysis and quick look up requests
