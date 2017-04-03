@@ -17,7 +17,6 @@ while [[ $LOOP = "TRUE" ]]; do
 	if [[ $(ps aux | grep "$JOB" | grep -v "grep" | grep -v "resource_use" | awk -v OFS="\t" '$1=$1' | cut -f 6 | wc -l) -lt 1 ]]; then
 		echo -e "No Processes Found"
 		LOOP="FALSE"
-		exit
 	else
 		RES=$(ps aux | grep "$JOB" | grep -v "grep" | grep -v "resource_use" | awk -v OFS="\t" '$1=$1' | cut -f 6 | sort -r | head -n 1)
 		if [[ $RES -gt $USAGE ]]; then
