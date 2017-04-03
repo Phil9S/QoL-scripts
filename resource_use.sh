@@ -4,6 +4,8 @@ JOB=${1}
 
 LOOP="TRUE"
 USAGE=0
+DATE=$(date +[%D-%R])
+echo -e "RAM usage check - Started ${DATE}" > $HOME/resource_use.log
 
 if [[ $# -eq 0 ]]; then
 	echo -e "You need to provide a search term for the target process!"
