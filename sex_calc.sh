@@ -46,7 +46,7 @@ for i in `cat bam_list_sexcalc.txt`; do
 	
 	if [[ "$ratio" -le 10 ]]; then
 		echo -e "${i}\t${ratio}\tM" >> ${OUTPUT}sex_calc_results.tsv
-	elif [[ "$ratio" -ge 30 ]]; then
+	elif [[ "$ratio" -ge 19 ]]; then
 		echo -e "${i}\t${ratio}\tF" >> ${OUTPUT}sex_calc_results.tsv
 	else
 		echo -e "${i}\t${ratio}\t?" >> ${OUTPUT}sex_calc_results.tsv
