@@ -3,6 +3,15 @@
 SEARCH=${1}
 FILE=${2}
 
+if [[ $# -eq 0 ]]; then
+	echo -e "## Variant Counter ## - Arguments please!  Try ./variant_counter.sh search_pattern /target/vcf/file.vcf\n"
+	exit
+fi
+
+if [[ $# -lt 2 ]]; then
+        echo -e "## Variant Counter ## - More Arguments please!  Try ./variant_counter.sh search_pattern /target/vcf/file.vcf\n"
+        exit
+fi
 
 echo -e "## Variant Counter ## - Searching for pattern ${SEARCH} in FILE ${FILE}..."
 grep "${SEARCH}" ${FILE} > grep_outTEMP
