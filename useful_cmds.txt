@@ -1,0 +1,11 @@
+Mean of col
+awk '{ total += $1; count++ } END { print total/count }'
+
+Sample count in vcf.gz (remove wc -l for sorted list of samples)
+bcftools view -h "my.vcf.gz" | grep "#C" | tr '\t' '\n' | sed -e '1,9d' | sort -u | wc -l
+
+Sample count in vcf (remove wc -l for sorted list of samples)
+cat my.vcf | grep "#C" | tr '\t' '\n' | sed -e '1,9d' | sort -u | wc -l
+
+Find matching lines from list of search terms
+cat search_terms.txt | xargs -I {} grep {} search_file
