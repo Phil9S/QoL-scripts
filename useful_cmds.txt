@@ -9,3 +9,6 @@ cat my.vcf | grep "#C" | tr '\t' '\n' | sed -e '1,9d' | sort -u | wc -l
 
 Find matching lines from list of search terms
 cat search_terms.txt | xargs -I {} grep {} search_file
+
+Lookup all folder disk sizes
+ls . | xargs -I {} du -hs {} | sort -h
