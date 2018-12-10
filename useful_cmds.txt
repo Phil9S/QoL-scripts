@@ -12,3 +12,6 @@ cat search_terms.txt | xargs -I {} grep {} search_file
 
 Lookup all folder disk sizes
 ls . | xargs -I {} du -hs {} | sort -h
+
+Parallel cmd via xargs including sample name and variable injection
+cat list | xargs -n 1 -P CORES -I {} sh -c 'COMMAND1 --option1 $1 --option2 $2 --flag > /dev/null 2>&1; COMMAND2 "$3" >> LOGFILE;' -- {} ${VAR1} ${VAR2} ${VAR3}
