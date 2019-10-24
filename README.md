@@ -1,4 +1,4 @@
-#Quality of Life (QoL) scripts
+## Quality of Life (QoL) scripts
 Some basic scripts to ease data analysis, analysis/plotting templates, and quick look up requests
 
 #### FDR_function.R
