@@ -1,17 +1,20 @@
-Mean of col
+#Mean of col
 awk '{ total += $1; count++ } END { print total/count }'
 
-Sample count in vcf.gz (remove wc -l for sorted list of samples)
+#Sample count in vcf.gz (remove wc -l for sorted list of samples)
 bcftools view -h "my.vcf.gz" | grep -m 1 "#C" | tr '\t' '\n' | sed -e '1,9d' | sort -u | wc -l
 
-Sample count in vcf (remove wc -l for sorted list of samples)
+#Sample count in vcf (remove wc -l for sorted list of samples)
 cat my.vcf | grep -m 1 "#C" | tr '\t' '\n' | sed -e '1,9d' | sort -u | wc -l
 
-Find matching lines from list of search terms
+#Find matching lines from list of search terms
 cat search_terms.txt | xargs -I {} grep {} search_file
 
-Lookup all folder disk sizes
+#Lookup all folder disk sizes
 ls . | xargs -I {} du -hs {} | sort -h
 
-Parallel cmd via xargs including sample name and variable injection
+#Parallel cmd via xargs including sample name and variable injection
 cat list | xargs -n 1 -P CORES -I {} sh -c 'COMMAND1 --option1 $1 --option2 $2 --flag > /dev/null 2>&1; COMMAND2 "$3" >> LOGFILE;' -- {} ${VAR1} ${VAR2} ${VAR3}
+
+# Listing filenames and read counts from indexed bam files found in a folder - Requires samtools and bam index file
+for i in `find . -type f -name "*.bam"`; do samtools idxstats ${i} |  cut -f3 | awk 'BEGIN {{total=0}} {{total += $1}} END {{print total}}' | paste <(echo "${i}") -; done

@@ -47,7 +47,7 @@ Niche R script designed to assigned indepenet variables to inconstiently derived
 Bash script for performing rudamentary on-the-fly genetic sex calculations from targeted, WES, and WGS sequencing BAMS. Calculations are performed as a ratio of Read coverage between ChrX and ChrY with no other corrections. An arbitary ambiguity range was implemented to prevent misclassification of borderline cases. Requires an input folder of BAMs and access to `samtools`.
 
 #### trycatch_adv.R - Unknown source author
-An R function to improve trycatch() implementation. Fucntion is used in SKAT association testing to report and filter genes which failed statistical testing with accurate warning and errors retained.
+An R function to improve trycatch() implementation. Function is used in SKAT association testing to report and filter genes which failed statistical testing with accurate warning and errors retained.
 
 #### useful_cmds.txt
 A text file containing miscellaneous commands and one-liners which are useful for general day-to-day (bio)informatics.
