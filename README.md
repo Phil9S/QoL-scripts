@@ -54,3 +54,15 @@ A text file containing miscellaneous commands and one-liners which are useful fo
 
 #### variant_counter.sh
 Bash script to perform raw variant (HET/Non-ref HOM) counts from a multi-sample VCF based on coordinate position or rsID. Input is a search term (rsID or single base coordinate) and a VCF. Returns output to stdout. 
+
+#### array_submit.sh
+Example of array submission script for SLURM job control systems passing a list of files as an ENV variable
+
+#### create_conda_r_env.sh
+Bash script to create a conda environment supporting a specified versions of R project for statistical computing
+
+#### grouped_dendro_pretty.R
+R script example for a aethetically pleasing dendrogram tree plot including colour-coded leaf groupings.
+
+#### sbatch_generator.sh
+Bash script to automatically generate a SLURM sbatch job submission script using specified parameters
