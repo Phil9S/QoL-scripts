@@ -18,3 +18,6 @@ cat list | xargs -n 1 -P CORES -I {} sh -c 'COMMAND1 --option1 $1 --option2 $2 -
 
 # Listing filenames and read counts from indexed bam files found in a folder - Requires samtools and bam index file
 for i in `find . -type f -name "*.bam"`; do samtools idxstats ${i} |  cut -f3 | awk 'BEGIN {{total=0}} {{total += $1}} END {{print total}}' | paste <(echo "${i}") -; done
+
+## Recursive du file size check (sorted)
+ls | xargs -n 1 -P 1 -i{} du -sh {}/ 2>/dev/null | sort -hr
