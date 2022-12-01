@@ -52,6 +52,9 @@ Pipeline for determining genetic population for a given set of samples with SNV 
 #### progress_bar.sh
 Bash script implementation of a for/while loop progress bar. For iterative bash processes, the functional loop code can be inserted within the progress_bar code and sends an informative 1-100% progress bar to stdout.
 
+#### qc_script_qualimap.sh
+Bash script to perform fastq QC using qualimap on a directory of fastq files. Requires functioning qualimap installation.
+
 #### read_count.sh
 Minor bash script to calculate BAM file read counts for a given region or total. Manual editing of commented lines is required to switch between.
 
