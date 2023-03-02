@@ -16,6 +16,9 @@ Peform rudementary de novo genome assebmly from ONT nanopore data [outdated].
 #### discord_check.sh
 Perform sample discordance analysis between samples using germline SNV calls using two VCF inputs.
 
+#### durecur.sh
+A script to perform recursive `du` to assess directory sizes
+
 #### FDR_function.R
 R script providing a robust function for FDR correction. Providing a vector of p-values and a desired FDR cut-off returns a data.frame with p-values, q-values, and FDR adjustment boolean.
 
